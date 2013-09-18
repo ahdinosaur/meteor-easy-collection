@@ -1,0 +1,11 @@
+{
+  "name": "easy-collection",
+  "description": "Meteor.Collection made easy with JSON Schema",
+  "homepage": "https://github.com/ahdinosaur/meteor-easy-collection",
+  "author": "Michael Williams",
+  "version": "0.0.1",
+  "git": "https://github.com/ahdinosaur/meteor-easy-collection.git",
+  "packages": {
+    "tv4": {}
+  }
+}
