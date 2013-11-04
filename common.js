@@ -33,6 +33,7 @@ var setupAllow = function (col) {
     Future = Npm.require("fibers/future");
     col.allow({
       insert: function (userId, doc) {
+        console.log("insert!");
         return col.validate(doc).valid;
       },
       update: function (userId, doc, fieldNames, modifier) {
@@ -46,7 +47,6 @@ var setupAllow = function (col) {
             tmpCol.update({ _id: tmpId }, modifier, function (err) {
               if (err) { throw err; }
               var result = tmpCol.findOne({ _id: tmpId });
-              console.log(result);
               fut['return'](col.validate(result).valid);
             });
           });
